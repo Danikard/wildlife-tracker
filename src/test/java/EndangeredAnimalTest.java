@@ -1,12 +1,8 @@
 import org.junit.Test;
 
-public class AnimalTest {
+public class EndangeredAnimalTest {
     @Test
     public void getName() {
     }
 
-    @Test
-    public void getId() {
-
-    }
 }
