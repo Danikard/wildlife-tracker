@@ -34,5 +34,44 @@ public class Sighting {
         return date;
     }
 
+    @Override
+    public boolean equals(Object otherSighting) {
+        if (!(otherSighting instanceof Sighting)) {
+            return false;
+        } else {
+            Sighting newSighting = (Sighting) otherSighting;
+            return this.getAnimal_id()==(newSighting.getAnimal_id())&&this.getLocation()==(newSighting.getLocation())&&this.getRangers_name()==(newSighting.getRangers_name());
+
+        }
+    }
+
+    public void save() {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO endangered_animals (animal_id,location,rangers_name,date) VALUES (:animal_id,:location,:rangers_name,now();)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("animal_id", this.animal_id)
+                    .addParameter("location", this.location)
+                    .addParameter("rangers_name", this.rangers_name)
+                    .executeUpdate()
+                    .getKey();
+        }
+    }
+
+    public static List<Sighting> all() {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings";
+            return con.createQuery(sql).executeAndFetch(Sighting.class);
+        }
+    }
+
+    public static Sighting find(int id) {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings WHERE id=:id";
+            Sighting sightings = con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Sighting.class);
+            return sightings;
+        }
+    }
 
 }
