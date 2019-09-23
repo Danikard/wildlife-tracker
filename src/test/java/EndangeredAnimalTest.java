@@ -1,8 +1,9 @@
+import org.junit.Rule;
 import org.junit.Test;
 
-public class EndangeredAnimalTest {
-    @Test
-    public void getName() {
-    }
+import static org.junit.Assert.assertEquals;
 
+public class EndangeredAnimalTest {
+    @Rule
+    public DatabaseRule database = new DatabaseRule();
 }
