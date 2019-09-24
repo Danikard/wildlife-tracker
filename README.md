@@ -29,7 +29,7 @@ KARAMBIZI Amandine Gloria
     
 ### CONTACTS- 
  
- -[X]  For support contact us:    
+-[X]  For support contact us:    
    +  Email:karambiziga@gmail.com
    +  Phone.Nbr:+250782398092 
     
