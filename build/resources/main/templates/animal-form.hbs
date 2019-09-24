@@ -6,11 +6,11 @@
         <div class="col-sm-4" id="center">
             <form action="/animal/new" method="POST" name="test">
                 <div class="form-group">
-                    <label for="nameOfAnimal"> Animal Name </label>
+                    <label for="nameOfAnimal"> Animal Name </label><br>
                         <input id="nameOfAnimal" name="name" placeholder="Animal Name" type="text" tabindex="1" required autofocus>
                 </div>
                 <div class="form-group">
-                    <label for="health">Health</label>
+                    <label for="health">Health</label><br>
                         <select name="health">
                             <option>Ill</option>
                             <option>Okay</option>
@@ -18,7 +18,7 @@
                         </select>
                 </div>
                 <div class="form-group">
-                    <label for="age">Age  </label>
+                    <label for="age">Age  </label><br>
                         <select name="age">
                             <option>Newborn</option>
                             <option>Young</option>
@@ -27,18 +27,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="rangerName">Ranger's Name:</label>
+                    <label for="rangerName">Ranger's Name:</label><br>
                         <input id="ranger_name" name="ranger_name" type="text" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="location">Location</label>
-                        <select name="location">
+                    <label for="location">Location</label><br>
+                        <select name="location" class="form-control">
                             <option>Zone A</option>
                             <option>Zone B</option>
                             <option>Zone C</option>
                         </select>
-
                 </div>
                 <button type="submit" class="btn btn-success">Add Animal</button>
                 <br>
