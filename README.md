@@ -27,7 +27,7 @@ KARAMBIZI Amandine Gloria
    2. Clone this repository
    3. Open it within IntelliJ 
     
-### CONTACTS- 
+### CONTACTS
     
    +  Email:karambiziga@gmail.com
    +  Phone.Nbr:+250782398092 
