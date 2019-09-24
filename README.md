@@ -31,8 +31,8 @@ KARAMBIZI Amandine Gloria
     +  Phone.Nbr:+250782398092  
  ### Picture of Application  
    
-  <img src= "/images/home.png">
-  <img src= "/images/history.png">
+  <img src= "images/home.png">
+  <img src= "images/history.png">
      
  ### LISENCE
 - [x] MITCopyright &copy; [2019] Karambizi Amandine Gloria
