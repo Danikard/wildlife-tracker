@@ -10,3 +10,11 @@ text-align:center;
 form{
 color:black;
 }
+#para{
+text-align:center;
+font-size:23px;
+padding-top:120px;
+}
+label{
+color:white;
+}
