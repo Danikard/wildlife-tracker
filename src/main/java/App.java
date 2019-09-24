@@ -39,7 +39,7 @@ public class App {
         post("/animal/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("name");
-            int sightingId = Integer.parseInt(request.queryParams("sightingId"));
+//            int sightingId = Integer.parseInt(request.queryParams("sightingId"));
             String location = request.queryParams("location");
             String ranger_name = request.queryParams("ranger_name");
             String age = request.queryParams("age");
@@ -53,7 +53,7 @@ public class App {
             model.put("age",age);
             model.put("health",health);
             model.put("name",name);
-            model.put("sightingId",sightingId);
+//            model.put("sightingId",sightingId);
             model.put("location",location);
             model.put("ranger_name",ranger_name);
             return new ModelAndView(model, "animal.hbs");
