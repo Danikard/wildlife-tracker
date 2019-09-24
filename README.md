@@ -28,8 +28,7 @@ KARAMBIZI Amandine Gloria
    3. Open it within IntelliJ 
     
 ### CONTACTS- 
- 
--[X]  For support contact us:    
+    
    +  Email:karambiziga@gmail.com
    +  Phone.Nbr:+250782398092 
     
