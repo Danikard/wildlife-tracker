@@ -1,0 +1,23 @@
+{{#partial "content"}}
+    <body>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" id="center">
+                <h4><a href="/">Home</a></h4>
+                <h1>endangered Animal details</h1>
+                {{#if name}}
+                    <h5>Name:{{name}}</h5>
+                    <h5>Location:{{location}}</h5>
+                    <h5>Health: {{health}}</h5>
+                    <h5>Age: {{age}}</h5>
+                    <h5>Reported by: {{ranger_name}}</h5>
+                {{else}}
+                    <p>To report a sighting, please visit the <a href="/">home page</a>.</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    </body>
+{{/partial}}
+{{> layout.hbs}}

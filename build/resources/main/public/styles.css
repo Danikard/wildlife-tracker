@@ -1,4 +1,12 @@
 body{
 background-image:url("images/deer_wildlife_horns_2.jpg");
 background-size:cover;
+color:white;
+}
+h1{
+color:white;
+text-align:center;
+}
+form{
+color:black;
 }

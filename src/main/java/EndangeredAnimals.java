@@ -12,7 +12,7 @@ public class EndangeredAnimals {
     private String health;
     private String age;
 
-    public EndangeredAnimals(String name) {
+    public EndangeredAnimals(String name,String health,String age) {
         this.name = name;
         this.id = id;
         this.health = health;
@@ -41,16 +41,18 @@ public class EndangeredAnimals {
             return false;
         } else {
             EndangeredAnimals newEndangeredAnimal = (EndangeredAnimals) otherEndangeredAnimal;
-            return this.getName().equals(newEndangeredAnimal.getName());
+            return this.getName().equals(newEndangeredAnimal.getName())&&this.getHealth().equals(newEndangeredAnimal.getHealth())&&this.getAge().equals(newEndangeredAnimal.getAge());
 
         }
     }
 
     public void save() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO endangered_animals (name) VALUES (:name)";
+            String sql = "INSERT INTO endangered_animals (name,health,age) VALUES (:name,:health,:age)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
+                    .addParameter("health", this.health)
+                    .addParameter("age", this.age)
                     .executeUpdate()
                     .getKey();
         }

@@ -1,0 +1,63 @@
+{{#partial "content"}}
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <h3>ANIMALS</h3>
+                <p>{{#each endangeredAnimals}}
+                <h5>{{name}}</h5>
+            {{/each}}
+                {{#each allAnimals}}
+                    <h5>{{name}}</h5>
+                {{/each}}
+                </p>
+            </div>
+               <div class="col-md-2">
+                   <h3>ANIMAL LOCATION</h3>
+            {{#if allSightings}}
+                {{#each allSightings}}
+                    <p>{{location}}</p>
+                {{/each}}
+            {{else}}
+                <p>No sighting</p>
+            {{/if}}
+        </div>
+            <div class="col-md-2">
+            <p>RANGER NAME</p>
+            {{#if allSightings}}
+                {{#each allSightings}}
+                    <p>{{ranger_name}}</p>
+                {{/each}}
+            {{else}}
+                <p>No sighting</p>
+            {{/if}}
+            </div>
+            <div class="col-md-2">
+                <p>HEALTH OF ANIMAL</p>
+                {{#if endangeredAnimals}}
+                    {{#each endangeredAnimals}}
+                        <p>{{health}}</p>
+                    {{/each}}
+                {{/if}}
+            </div>
+            <div class="col-md-2">
+                <p>AGE OF ANIMAL</p>
+                {{#if endangeredAnimals}}
+                    {{#each endangeredAnimals}}
+                        <p>{{age}}</p>
+                    {{/each}}
+                {{/if}}
+            </div>
+            <div class="col-md-2">
+                <p>TIME</p>
+                {{#if allSightings}}
+                    {{#each allSightings}}
+                        <p>{{date}}</p>
+                    {{/each}}
+                {{else}}
+                    <p>No sighting</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>{{/partial}}{{> layout.hbs}}
+
+
