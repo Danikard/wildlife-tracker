@@ -30,9 +30,9 @@ KARAMBIZI Amandine Gloria
     +  Email:karambiziga@gmail.com
     +  Phone.Nbr:+250782398092  
  ### Picture of Application  
-   
-  <img src= "images/home.png">
-  <img src= "images/history.png">
+  <img src= "screenshot/history.png"> 
+  <img src= "screenshot/home.png">
+  
      
  ### LISENCE
 - [x] MITCopyright &copy; [2019] Karambizi Amandine Gloria
