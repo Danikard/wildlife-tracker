@@ -31,8 +31,8 @@ KARAMBIZI Amandine Gloria
     +  Phone.Nbr:+250782398092  
  ### Picture of Application  
    
-  <img src= "images/Screenshot_2019-09-24 Wildlife tracker(1).png">
-  <img src= "images/Screenshot_2019-09-24 Wildlife tracker.png">
+  <img src= "/images/Screenshot_2019-09-24 Wildlife tracker(1).png">
+  <img src= "/images/Screenshot_2019-09-24 Wildlife tracker.png">
      
  ### LISENCE
 - [x] MITCopyright &copy; [2019] Karambizi Amandine Gloria
