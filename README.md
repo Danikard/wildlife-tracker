@@ -47,5 +47,5 @@ KARAMBIZI Amandine Gloria
      
 ### LISENCE
 
-- [x] MITCopyright &copy; [2019] Karambizi Amandine Gloria
+- [x] Copyright: [2019] Karambizi Amandine Gloria
 
