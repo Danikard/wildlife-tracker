@@ -35,7 +35,7 @@ KARAMBIZI Amandine Gloria
 ### Picture of Application 
  
   <img src= "screenshot/history.png"> 
-  <img src= "screenshot/home.png">
+  <img src= "screenshot/home.jpg">
   
      
 ### LISENCE
