@@ -2,7 +2,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class EndangeredTest {
-    @Test    public void Endangered_Instantiating_correctly() {
+    @Test
+    public void Endangered_Instantiating_correctly() {
         Endangered endangered = new Endangered("rakoon","ill","newborn");
         assertEquals(true, endangered instanceof Endangered);
     }
@@ -22,6 +23,11 @@ public class EndangeredTest {
     public void Animals_instantiatesWithHealth_String(){
         Endangered endangered  = new Endangered("panther", "ill", "young");
         assertEquals(endangered .getHealth(), "ill");
+    }
+    @Test
+    public void Animals_instantiatesWithAge_String(){
+        Endangered endangered  = new Endangered("panther", "ill", "young");
+        assertEquals(endangered .getHealth(), "young");
     }
     @Test
     public void equals_returnsTrueIfNamesAreTheSame(){
