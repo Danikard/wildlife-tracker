@@ -2,7 +2,7 @@ import java.util.List;
 import org.sql2o.*;
 import java.sql.Timestamp;
 
-public class Sighting {
+public class Sighting implements AnimalInt {
     private String ranger_name;
     private int id;
     private String location;
@@ -41,6 +41,7 @@ public class Sighting {
         }
     }
 
+    @Override
     public void save() {
         try (Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sightings (ranger_name,location,date) VALUES (:ranger_name,:location,now())";

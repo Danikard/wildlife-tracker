@@ -3,10 +3,9 @@ import java.util.List;
 import org.sql2o.*;
 
 
-public class Endangered {
+public class Endangered implements AnimalInt {
 
     private String name;
-    public boolean is_endagered;
     private int id;
     private String health;
     private String age;
@@ -45,6 +44,7 @@ public class Endangered {
         }
     }
 
+    @Override
     public void save() {
         try (Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO endangered_animals (name,health,age) VALUES (:name,:health,:age)";

@@ -2,7 +2,7 @@ import java.util.List;
 import org.sql2o.*;
 
 
-public class Animal {
+public class Animal implements AnimalInt {
     private String name;
     private int id;
 
@@ -29,7 +29,7 @@ public class Animal {
 
         }
     }
-
+    @Override
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO animals (name) VALUES (:name)";
