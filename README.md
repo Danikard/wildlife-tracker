@@ -21,11 +21,18 @@ KARAMBIZI Amandine Gloria
    + IntelliJ IDEA Community Edition
    + classes with extension java 
    
-### INSTALLATION 
+### Setup
  
    1. Install  IntelliJ IDEAL Community Edition
    2. Clone this repository
    3. Open it within IntelliJ 
+   
+   + CREATE DATABASE wildlife_tracker;
+   + \c wildlife_tracker;
+   + CREATE TABLE animals (id serial PRIMARY KEY, name varchar);
+   + CREATE TABLE endangered_animals (id serial PRIMARY KEY, name varchar, health varchar, age varchar);
+   + CREATE TABLE sightings (id serial PRIMARY KEY, location varchar, ranger_name varchar,date date);
+   + CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
     
 ### CONTACTS
     
