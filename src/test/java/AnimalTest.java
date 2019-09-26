@@ -10,32 +10,32 @@ public class AnimalTest {
 
     @Test
     public void animal_instantiatesCorrectly_true() {
-        Animal testAnimal = new Animal("lion");
-        assertEquals(true, testAnimal instanceof Animal);
+        Animal animal = new Animal("lion");
+        assertEquals(true, animal instanceof Animal);
     }
 
     @Test
     public void Animal_instantiatesWithName_String() {
-        Animal testAnimal = new Animal("rakoon");
-        assertEquals("rakoon", testAnimal.getName());
+        Animal animal = new Animal("rakoon");
+        assertEquals("rakoon", animal.getName());
     }
 
 
     @Test
     public void equals_returnsTrueIfNameAndSightingIdAreSame_true() {
-        Animal testAnimal = new Animal("panther");
+        Animal animal = new Animal("panther");
         Animal anotherAnimal = new Animal("panther");
-        assertTrue(testAnimal.equals(anotherAnimal));
+        assertTrue(animal.equals(anotherAnimal));
     }
 
     @Test
     public void all_returnsAllInstancesOfAnimal_true() {
-        Animal testAnimal = new Animal("rat");
-        Animal secondAnimal = new Animal("kangaroo");
-        testAnimal.save();
-        secondAnimal.save();
-        assertEquals(true, Animal.all().get(0).equals(testAnimal));
-        assertEquals(true, Animal.all().get(1).equals(secondAnimal));
+        Animal animal = new Animal("rat");
+        Animal anotherAnimal = new Animal("kangaroo");
+        animal.save();
+        anotherAnimal.save();
+        assertEquals(true, Animal.all().get(0).equals(animal));
+        assertEquals(true, Animal.all().get(1).equals(anotherAnimal));
     }
 
 }
