@@ -52,7 +52,6 @@ public class App {
             model.put("age",age);
             model.put("health",health);
             model.put("name",name);
-//            model.put("sightingId",sightingId);
             model.put("location",location);
             model.put("ranger_name",ranger_name);
             return new ModelAndView(model, "animal.hbs");
