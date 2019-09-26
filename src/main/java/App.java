@@ -26,7 +26,7 @@ public class App {
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("animals", Animal.all());
-            model.put("endangeredAnimals", EndangeredAnimals.all());
+            model.put("endangered", Endangered.all());
             model.put("sightings",Sighting.all());
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
@@ -39,15 +39,14 @@ public class App {
         post("/animal/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("name");
-//            int sightingId = Integer.parseInt(request.queryParams("sightingId"));
             String location = request.queryParams("location");
             String ranger_name = request.queryParams("ranger_name");
             String age = request.queryParams("age");
             String health = request.queryParams("health");
             Animal animals = new Animal(name);
             animals.save();
-            EndangeredAnimals endangeredAnimal = new EndangeredAnimals(name,health,age);
-            endangeredAnimal.save();
+            Endangered endangered = new Endangered(name,health,age);
+            endangered.save();
             Sighting sightings = new Sighting(location,ranger_name);
             sightings.save();
             model.put("age",age);
@@ -71,8 +70,8 @@ public class App {
             String age = request.queryParams("age");
             String ranger_name = request.queryParams("ranger_name");
             String location = request.queryParams("location");
-            EndangeredAnimals endangeredAnimal = new EndangeredAnimals(name,health,age);
-            endangeredAnimal.save();
+            Endangered endangered = new Endangered(name,health,age);
+            endangered.save();
             Sighting sightings = new Sighting(location,ranger_name);
             sightings.save();
             model.put("age",age);
@@ -83,12 +82,12 @@ public class App {
             return new ModelAndView(model, "endangered.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/display", (request, response) -> {
+        get("/recorded", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("allAnimals", Animal.all());
-            model.put("endangeredAnimals", EndangeredAnimals.all());
+            model.put("endangered", Endangered.all());
             model.put("allSightings", Sighting.all());
-            return new ModelAndView(model, "display.hbs");
+            return new ModelAndView(model, "recorded.hbs");
         }, new HandlebarsTemplateEngine());
 
 

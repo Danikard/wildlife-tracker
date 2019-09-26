@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-2">
                 <p>ANIMALS</p>
-                <p>{{#each endangeredAnimals}}
+                <p>{{#each endangered}}
                 <h5>{{name}}</h5>
             {{/each}}<br>
 <!--                <strong>list of all animals</strong>-->
@@ -34,16 +34,16 @@
             </div>
             <div class="col-md-2">
                 <p>HEALTH OF ANIMAL</p>
-                {{#if endangeredAnimals}}
-                    {{#each endangeredAnimals}}
+                {{#if endangered}}
+                    {{#each endangered}}
                         <p>{{health}}</p>
                     {{/each}}
                 {{/if}}
             </div>
             <div class="col-md-2">
                 <p>AGE OF ANIMAL</p>
-                {{#if endangeredAnimals}}
-                    {{#each endangeredAnimals}}
+                {{#if endangered}}
+                    {{#each endangered}}
                         <p>{{age}}</p>
                     {{/each}}
                 {{/if}}

@@ -60,15 +60,4 @@ public class Sighting {
         }
     }
 
-    public static Sighting find(int id) {
-        try (Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sightings WHERE id=:id";
-            Sighting sightings = con.createQuery(sql)
-                    .addParameter("id", id)
-                    .throwOnMappingFailure(false)
-                    .executeAndFetchFirst(Sighting.class);
-            return sightings;
-        }
-    }
-
 }
